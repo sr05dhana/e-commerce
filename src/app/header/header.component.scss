@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+
+    .main-heading {
+        margin: 0 auto;
+    }
+
+    .sort-class {
+        position: absolute;
+        right: 4%;
+    }
+
+    .sort-label {
+        opacity: 0.5;
+        margin-right: 8px;
+    }
+}

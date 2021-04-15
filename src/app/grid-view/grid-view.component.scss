@@ -1,0 +1,49 @@
+.grid-view {
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+
+.prod-name:hover {
+    text-decoration: underline;
+}
+
+.detail {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+.price {
+    margin-bottom: -10px;
+}
+
+.prod-disp {
+    border: 1px solid lightgray;
+    align-items: center;
+    padding: 30px;
+    margin: 10PX;
+    z-index: 1;
+}
+
+.prod-disp:hover {
+    border: 1px solid #4FB68D;
+}
+
+.image {
+    max-width: 100%;
+    min-width: 90%;
+    display: block;
+    height: 175px;
+    margin: 0 auto;
+    object-fit: scale-down;
+	-webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    opacity: 1;
+}
+
+.image:hover {
+    opacity: 0.5;
+}

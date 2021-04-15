@@ -1,0 +1,20 @@
+<div class="grid-view">
+    <div class="container-fluid">
+        <div class="row">
+            <a *ngFor="let product of products;" class="col-md-2 col-sm-2 col-xs-4 col-lg-2">
+                <div class="prod-disp">
+                    <div>
+                        <div>
+                            {{ product.size }}
+                        </div>
+                        <p class="detail">{{ product.date }}
+                        </p>
+                        <p class="price">
+                            ${{ product.price.toFixed(2) }}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
