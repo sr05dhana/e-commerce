@@ -1,13 +1,13 @@
 <div class="grid-view">
     <div class="container-fluid">
         <div class="row">
-            <a *ngFor="let product of products;" class="col-md-2 col-sm-2 col-xs-4 col-lg-2">
+            <a *ngFor="let product of products;" class="col-md-2 col-sm-2 col-xs-4 col-lg-2 remove-decor">
                 <div class="prod-disp">
                     <div>
-                        <div>
-                            {{ product.size }}
+                        <div class="face-style" [style.fontSize]="product.size">
+                            {{ product.face }}
                         </div>
-                        <p class="detail">{{ product.date }}
+                        <p class="detail">{{ getDate(product.date) | date: 'fullDate' }}
                         </p>
                         <p class="price">
                             ${{ product.price.toFixed(2) }}
@@ -15,6 +15,11 @@
                     </div>
                 </div>
             </a>
+        </div>
+        <div *ngIf="isAllProductsFetched" class="row">
+            <div class="center-field">
+                ~ end of catalogue ~
+            </div>
         </div>
     </div>
 </div>
