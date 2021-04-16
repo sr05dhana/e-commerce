@@ -3,7 +3,8 @@
     <div class="sort-class">
         <span class="sort-label">Sort By:</span>
         <button class="btn btn-outline-secondary dropdown-toggle sort-by" type="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false" style="margin-top: 6px;">{{ sortBy !== 'id' ? sortBy : 'Id' }}</button>
+            aria-haspopup="true" aria-expanded="false" style="margin-top: 6px;">{{ !!sortBy ? sortBy :
+            'Relevance' }}</button>
         <div class="dropdown-menu dropdown-menu-right" style="z-index: 9999;">
             <a (click)="sortProducts('size')" class="dropdown-item">Size</a>
             <a (click)="sortProducts('price')" class="dropdown-item">Price</a>
