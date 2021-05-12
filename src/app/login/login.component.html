@@ -1,0 +1,16 @@
+<div class="login-container">
+    <div class="inner-container">
+        <div class="input-area">
+            <input type="text" placeholder="User Name" [(ngModel)]="userName" />
+        </div>
+        <div class="input-area">
+            <input type="password" placeholder="Password" [(ngModel)]="password" />
+        </div>
+        <div class="input-area">
+            <button (click)="checkLogin()">Login</button>
+        </div>
+        <div class="input-area">
+            New User? Click <a class="reg-link" [routerLink]="'register'">here</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div>
+    <div style="width: 100%; padding-bottom: 1%;">
+        <span style="float: right;">
+            <a [routerLink]="['']" class="logout-link">Logout</a>
+        </span>
+    </div>
+    <div *ngIf="!!allCourses.length" style="width: 100%; margin-left: 5%;">
+        <button (click)="isEnrolled = true" [style.color]="isEnrolled ? 'red' : 'black'">Enrolled Courses</button>
+        <button (click)="isEnrolled = false" [style.color]="!isEnrolled ? 'red' : 'black'">All Courses</button>
+    </div>
+    <table *ngIf="isEnrolled" class="course-table">
+        <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+            <th>Enrollment ID</th>
+        </tr>
+        <tr *ngIf="!!userCourses">
+            <td class="tab-data">{{ userCourses.courseid }}</td>
+            <td class="tab-data">{{ courseName }}</td>
+            <td class="tab-data">{{ userCourses.enrollmentid }}</td>
+        </tr>
+    </table>
+    <table *ngIf="!isEnrolled" class="course-table">
+        <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+            <th>Duration</th>
+        </tr>
+        <tr *ngFor="let course of allCourses">
+            <td class="tab-data">{{ course.courseid }}</td>
+            <td class="tab-data">{{ course.coursename }}</td>
+            <td class="tab-data">{{ course.duration }}</td>
+        </tr>
+    </table>
+</div>

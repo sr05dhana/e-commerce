@@ -1,0 +1,20 @@
+<div class="login-container">
+    <div class="inner-container">
+        <div class="input-area">
+            <input type="text" placeholder="User Name" [(ngModel)]="userName" />
+        </div>
+        <div class="input-area">
+            <input type="password" placeholder="Password" [(ngModel)]="password" />
+        </div>
+        <div class="input-area">
+            <select [(ngModel)]="role">
+                <option [disabled]="true" [value]="''" selected>Select Role</option>
+                <option [value]="'learner'">Learner</option>
+                <option [value]="'instructor'">Instructor</option>
+            </select>
+        </div>
+        <div class="input-area">
+            <button (click)="signUp()">Register</button>
+        </div>
+    </div>
+</div>
